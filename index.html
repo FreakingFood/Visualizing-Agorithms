@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algorithm visulizer : Sorting, Binary Search & Backtracking</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4J64SC1QY7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4J64SC1QY7');
+  </script>
+  <link rel="icon" href="assets/img/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/custom-right-click-menu.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <link rel="stylesheet" href="assets/css/sorting.css">
+  <link rel="stylesheet" href="assets/css/sudoku.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/nQueen.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="description" content="This is a project to visualize algorithms using HTML, CSS, JavaScript. The algorithm is the most important part of any program.An algorithm is a set of instructions for solving a problem or accomplishing a task.">
+</head>
+
+<body>  
+  <nav class="nav-bar">
+    <div class="speed">
+      <label for="speed-range" class="label">Speed</label>
+      <div class="speed-input-div">
+        <p id="minSpeed">1</p>
+        <input type="range" id="speed-range" min="1" max="1000" label="Speed">
+        <p id="maxSpeed">1000</p>
+      </div>
+    </div>
+    <div class="about">
+      <select id="type-of-algorithm">
+        <option value="0">Sorting</option>
+        <option value="1">Binary search</option>
+        <option value="2">Backtracking</option>
+      </select>
+    </div>
+    <div id="option">
+      <div class="length">
+        <label for="length" class="label">Length of List </label>
+        <div class="length-input">
+          <p id="minLength">10</p>
+          <input type="range" id="length" min="10" max="1200" label="Length">
+          <p id="maxLength">150</p>
+        </div>
+      </div>
+    </div>
+    <button id="start">Sort the Array</button>
+    <div class="refresh"></div>
+  </nav>
+  <div class="main-body"></div>
+  <script src="assets/js/function.js"></script>
+  <script src="assets/js/sorting.js"></script>
+  <script src="assets/js/binarySearch.js"></script>
+  <script src="assets/js/backtracking.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/windowEventListener.js"></script>
+  <script type="application/ld+json">
+    
+    </script>
+  <script>
+    window.addEventListener('load', (event) => {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./serviceWorker.js')
+          .then(res => {
+            console.info('SW registered');
+          })
+          .catch(err => {
+            console.error('Error in registration SW', err);
+          })
+      } else {
+        console.log("Service Worker is not supported in your browser")
+      }
+    });
+  </script>
+</body>
+
+</html>
